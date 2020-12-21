@@ -3,7 +3,7 @@
     <h1>Hello  Articles</h1>
         <Banco msg="Hi mi friends este blog abarca   todo sobre lo que haremos este 2021" />
          Buscar <input type="text" v-model="title" />
-    <ul>
+ 
       <table border="1">
         <tr>
           <td>id</td>
@@ -16,7 +16,7 @@
           </tr>
         </tbody>
       </table>
-    </ul>
+   
   </div>
 </template>
 
@@ -25,6 +25,7 @@ import Banco from "@/components/Banco.vue";
 
 export default {
   name: "Blog",
+
 components:[Banco],
   data() {
     return {

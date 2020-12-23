@@ -47,6 +47,15 @@ export default createStore({
     },
     AddTarea(state,payload){
       state.tareas.push(payload);
+    },
+    DeleteTarea(state,payload){
+      state.tareas= state.tareas.filter( item => item.id !==payload )
+    },
+    ModificarTarea (state,payload){
+      state.tareas.filter( item => if(item.id===payload.id )
+      {item.texto=payload.texto,item.grupo=payload.grupo ,item.estado=payload.estado}
+      
+      )
     }
   },
 
@@ -77,7 +86,10 @@ export default createStore({
       },
       Add({commit},tarea){
         commit('AddTarea',tarea)
-      }
+      },
+     accionEliminar({commit},id){
+       commit('DeleteTarea',id);
+     } 
   },
   modules: {
   }

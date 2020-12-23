@@ -21,7 +21,7 @@
     <input type="radio" id="radio2" value="Bocina" v-model="task.estado" />
     <label for="radio2">Bocina</label>
     <br />
-    <input type="submit" value="Enviar" />
+    
   </div>
 </template>
     

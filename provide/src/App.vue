@@ -1,19 +1,29 @@
 <template>
 <div>
+
   <h1 :style="changeColor" >Contador : {{contador}}</h1>
   <contadoruno />
   <boton />
+
+  <div>
+    <h1> TO DO APP </h1>
+      
+      
+      
+        <AppTask />
+  </div>
 </div>
 </template>
 
 <script>
+import AppTask from '@/components/TareaApp.vue'
 import {computed, provide,ref} from 'vue'
 import contadoruno from '@/components/contadoruno.vue';
 import boton from '@/components/boton.vue'
 export default {
   name: 'App',
   components: {
-  contadoruno,boton
+  contadoruno,boton,AppTask
   },
   setup(){
 

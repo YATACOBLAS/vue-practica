@@ -1,7 +1,6 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head),
- 
-  target:'static',
+  target:'server',
   head: {
     title: 'frontend',
     meta: [
@@ -46,7 +45,9 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
-  //serverMiddleware: {'./backend':'~/backend' },
+  serverMiddleware: {
+      path:__dirname+'/backend',
+      handler:'~/backend/index.js' },
   //dev: process.env.NODE_ENV !== 'production'
  //target: 'static',
   

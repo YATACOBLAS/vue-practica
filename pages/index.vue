@@ -44,17 +44,17 @@ export default {
     title: "Home"
   },
   
-  // async asyncData(context) {
-  //   try {
-  //     return await fetch("http://localhost:9000/api/pets")
-  //       .then(res => res.json())
-  //       .then(data => {
-  //         return { pets: data };
-  //       });
-  //   } catch (e) {
-  //     console.error("SOMETHING WENT WRONG :" + e);
-  //   }
-  // },
+  async asyncData(context) {
+    try {
+      return await fetch("http://localhost:9000/api/pets")
+        .then(res => res.json())
+        .then(data => {
+          return { pets: data };
+        });
+    } catch (e) {
+      console.error("SOMETHING WENT WRONG :" + e);
+    }
+  },
   data() {
     return {
       pets: []
